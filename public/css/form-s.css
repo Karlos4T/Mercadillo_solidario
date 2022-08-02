@@ -1,0 +1,74 @@
+nav
+{
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo
+{
+    width: 130px;
+    margin: 3px;
+
+}
+
+nav a:hover .logo
+{
+    width: 140px;
+    margin: 0px;
+    transition: .2s;
+}
+
+.container-fluid
+{
+    font-family: 'Poppins', sans-serif;
+}
+
+input{
+    background-color: #eee;
+    border-radius: 10px;
+    border: rgb(175, 175, 175) 1px solid;
+}
+
+textarea{
+    background-color: #eee;
+    border-radius: 10px;
+    border: rgb(175, 175, 175) 1px solid;
+}
+
+
+.btn-photo {
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    color: #176d66fe;
+    padding: 10px;
+    content: 'Seleccionar'; /* texto por defecto */
+    overflow: hidden;
+    border: 3px solid #16a094fe;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+nav div div .btn
+{
+    background-color: #16a094fe;
+    color: red;
+}
+  
+.btn-photo input[type="file"] {
+    opacity: 0;
+    left: 0;
+    top: 0;
+    position: absolute;
+    cursor: pointer;
+
+}
+
+.btn-photo:hover{
+    color: #16504bfe;
+    border: 3px solid #16504bfe;
+}
+
+.b
+{
+    cursor: pointer;
+}
