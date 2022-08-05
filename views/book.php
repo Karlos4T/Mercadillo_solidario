@@ -24,11 +24,13 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-dark mb-5">
         <div class="container-fluid">
-            <a href="main.php">    
+            <a href="../views/">    
                 <img src="../public/imgs/Logo_sin_fondo.png" class="logo mm-3" alt="">
             </a>    
             <?php
                 include '../logic/hostconnect.php';
+                include '../logic/rev_ips.php';
+
                 if (isset($_POST['id']))
                     $id = $_POST['id'];
                 else if (isset($_GET['id']))
@@ -79,6 +81,12 @@
                         </ul>
                     </div>
                 <?php
+                }
+                else if (!$_SESSION && rev_ips())
+                {
+                    ?>
+                        <a href="../views/login_admin.php" class="btn btn-outline-light">Login as admin</a>
+                    <?php
                 }
                ?>
             </div>

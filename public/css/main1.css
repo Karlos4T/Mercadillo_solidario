@@ -1,0 +1,125 @@
+nav
+{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-fluid
+{
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo
+{
+    width: 130px;
+    margin: 3px;
+    filter: brightness(100000%);
+    cursor: pointer;
+}
+
+.logo:hover
+{
+    filter: brightness(100%);
+    transition: .2s;
+}
+
+nav a:hover p
+{
+    color: #18746cfe !important; 
+    transition: .2s !important;
+}
+
+nav a:hover img
+{
+    filter: brightness(70%) !important;
+    transition: .2s !important;
+}
+
+.banner
+{
+    /* From https://css.glass */
+    background: rgba(113, 248, 205, 0.137) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(5px) !important;
+    border: 1px solid rgba(134, 254, 216, 0.4) !important;
+}
+
+.return:hover
+{
+    background-color: white;
+    color: black !important;
+    font-size: 20px;
+    padding: 5px;
+    transition: .2s;
+}
+
+.container-social
+{
+    position: absolute;
+    border-radius: 0 0 20px 20px ;
+}
+
+.social
+{
+    font-size: 20px;
+}
+
+.insta:hover i
+{
+    background: linear-gradient(90deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5) !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;
+    font-size: 25px;
+    margin: 0;
+    transition: .2s !important;
+
+}
+
+.twitter:hover i
+{
+    color: #00acee !important;
+    font-size: 25px;
+    margin: 0;
+    transition: .2s !important;
+
+}
+
+.facebook:hover i
+{
+    color: #3b5998 !important;
+    font-size: 25px;
+    margin: 0;
+    transition: .2s !important;
+}
+
+.tiktok:hover i
+{
+    background: linear-gradient(60deg, #12ebff, white ,#f00f7c) !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;
+    font-size: 25px;
+    margin: 0;
+    transition: .2s !important;
+}
+
+.card .card-body .btn
+{
+    background-color: #16a094fe;
+}
+
+.card .card-body .btn:hover
+{
+    background-color: #176d66fe;
+}
+
+.card .card-body .card-title
+{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-img-top
+{
+    object-fit: cover;
+}

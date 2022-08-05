@@ -25,14 +25,12 @@
     <?php
         include '../logic/log_admin.php'; 
         include '../logic/rev_ips.php';
-        if($_SESSION)
-        {
-            header("Location: ../views/main.php");
-        }
+        if($_SESSION || !rev_ips())
+            header("Location: ../views/");
     ?>
     <nav class="navbar navbar-expand-lg bg-dark mb-5">
         <div class="container-fluid d-flex justify-content-md-between justify-content-center">
-            <a href="main.php">    
+            <a href="../views/">    
                 <img src="../public/imgs/Logo_sin_fondo.png" class="logo" alt="">
             </a>  
         </div>

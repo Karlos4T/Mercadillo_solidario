@@ -25,7 +25,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-dark mb-5">
         <div class="container-fluid">
-            <a href="main.php">
+            <a href="../views/">
                 <img src="../public/imgs/Logo_sin_fondo.png" class="logo mx-3" style="width: 130px;" alt="">
             </a>    
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -128,9 +128,9 @@
 
                 </div>
 
-                <div class="row d-flex justify-content-md-end justify-content-between mx-md-5 mt-4">
+                <div class="row d-flex justify-content-md-end justify-content-between mx-md-5 mb-5 mt-4">
 
-                    <a class="btn btn-secondary col-4 col-md-2 col-lg-1 mx-md-3" href="main.php" name="cancel" placeholder="Cancelar" id="">Cancel</a>
+                    <a class="btn btn-secondary col-4 col-md-2 col-lg-1 mx-md-3" href="../views/" name="cancel" placeholder="Cancelar" id="">Cancel</a>
                     <input class="btn btn-success col-4 col-md-2 col-lg-1" type="submit" name="submit" placeholder="Aceptar" id="">
 
                 </div>

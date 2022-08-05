@@ -9,39 +9,33 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     
+    <!--FONT AWESOME-->
+    <script src="https://kit.fontawesome.com/19283c162a.js" crossorigin="anonymous"></script>
+
     <!-- CSS -->
-    <link rel="stylesheet" href="../public/css/main.css">
+    <link rel="stylesheet" href="../public/css/main1.css">
 
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins:wght@300&family=Roboto:wght@700&display=swap" rel="stylesheet">
-
-    <!--Font Awesome-->
-    <script src="https://kit.fontawesome.com/19283c162a.js" crossorigin="anonymous"></script>
+    
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-dark">
-        <div class="container-fluid d-flex justify-content-md-between justify-content-center">
-            <a href="main.php">    
-                <img src="../public/imgs/Logo_sin_fondo.png" class="logo" alt="">
-            </a>  
-            <p class="h6 text-light">
-                <b>
-                    <?php
-                        include '../logic/log_admin.php'; 
-
-                        if ($_SESSION)
-                        {
-                            echo "Administrador";
-                        }
-                    ?>
-                </b>
-            </p>     
-            <form action="main.php" method="GET" class="mx-md-3 w-sm-100">
-                <div class="input-group w-sm-100">
-                    <input type="text" name="searcher" class="form-control w-auto" placeholder="Busca tu libro" aria-label="Recipient's username" aria-describedby="button-addon2">
+    <nav class="navbar navbar-expand-lg bg-dark d-flex flex-column">
+        <div class="container-fluid w-100">
+            <div class="w-25">
+                <a href="../views/" class="d-inline-flex rounded rounded-5 return p-3 text-light text-start text-sm-start" style="text-decoration: none;">
+                    <i class="fas fa-arrow-left"></i>
+                </a> 
+            </div>
+            <div class="d-flex flex-column w-auto align-items-center mt-4 m-sm-0">
+                <img src="../public/imgs/Logo_sin_fondo.png" class="logo d-flex" alt="">
+            </div>
+            <form action="../views/" method="GET" class="mx-md-3 w-sm-auto w-25 d-flex justify-content-end">
+                <div class="input-group w-100">
+                    <input type="text" name="searcher" class="form-control " placeholder="Busca tu libro" aria-label="Recipient's username" aria-describedby="button-addon2">
                     <button type="submit" class="btn btn-outline-light" id="button-addon2">
                         🡲
                     </button>
@@ -50,6 +44,52 @@
             </div>
         </div>
     </nav>
+    <div class="container d-flex justify-content-center bg-transparent">
+            <div class="container-social w-auto bg-dark d-flex justify-content-center">
+                <?php
+                    include '../logic/log_admin.php'; 
+
+                    if (!$_SESSION)
+                    {
+                        ?>
+                            <div class="social w-100 p-2 d-flex justify-content-evenly">
+                                <a href="https://www.instagram.com/iespnegras/?igshid=YmMyMTA2M2Y=" target="blank" class="text-muted px-sm-4 px-2 insta"><i class="fab fa-instagram"></i></a>
+                                <a href="https://twitter.com/IesPnegras" class="text-muted twitter px-sm-4 px-2" target="blank"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.facebook.com/IES-Peñas-Negras-788644004586154" target="blank" class="text-muted facebook px-sm-4 px-2"><i class="fab fa-facebook"></i></a>
+                                <a href="https://www.tiktok.com/@iespnegras" target="blank" class="text-muted tiktok px-sm-4 px-2"><i class="fab fa-tiktok"></i></a>        
+                            </div>  
+                        <?php
+                    }
+                    else if ($_SESSION)
+                    {
+                        ?>
+                            <div class="dropdown-center">
+                                <a class="h6 text-warning dropdown-toggle m-3 mt-0" style="text-decoration: none;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <b>
+                                        Administrador
+                                    </b>    
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-light">
+                                    <li>
+                                        <a class="dropdown-item p-0" href="#">
+                                            <form action="../views/form.php" method="POST">
+                                                <input type="submit" class="w-100 bg-transparent m-0 border-0 text-start mx-2" value="Añadir libro">
+                                            </form>
+                                        </a>
+                                    </li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li>
+                                        <form action="../logic/out_admin.php" class="d-flex justify-content-center mt-3">
+                                            <input type="submit" class="btn btn-outline-danger" value="Cerrar Sesión">
+                                        </form>
+                                    </li>    
+                                </ul>
+                            </div>
+                        <?php
+                    }
+                ?>
+            </div>
+        </div>
     <?php
         include '../logic/hostconnect.php';
        
@@ -62,23 +102,12 @@
              }
         }
     ?>
-    <div class="container-fluid bg-light pt-5">
-        <div class="alert alert-primary alert-dismissible fade show mx-5 d-flex justify-content-between p-3 rounded-4" role="alert">
-
-            <div class="text col-7 mt-3">
-                <strong class="h3 mt-2">MERCADILLO SOLIDARIO</strong>
-                <p class="h5 mt-5">
-                    A favor de la Asociación de niños con cáncer AFANION.
-                    Puedes colaborar comprando o donando libros de todo tipo que tengas en casa.
-                </p> 
-            </div>
-            
-            <img src="../public/imgs/Afanion.jpg" class="rounded rounded-5 col-2 mx-4" alt="">
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-        <div class="container d-flex flex-wrap">
+    <div class="container-fluid bg-light p-md-0">
+    <div class="d-flex justify-content-center h-auto banner-container">
+        <img src="../public/imgs/banner-insti.png" class="w-100" alt="">
+    </div>        
+        <div class="container d-flex flex-wrap justify-content-evenly">
             <?php
-
                 if (isset($_GET['searcher']) && !empty($_GET['searcher']))
                 {
                     $searcher = $_GET['searcher'];
@@ -97,7 +126,7 @@
                     while($row = mysqli_fetch_array($data))
                     {
                         ?>
-                            <div class="card m-3" style="width: 18rem;">
+                            <div class="card m-3" style="width: 15rem;">
                                 <img src="data:<?php $row['photo_type']; ?>;base64,<?php echo base64_encode($row['photo']);?>"
                                 class="card-img-top p-3 rounded-5 h-100" alt="...">
                                 <div class="card-body">
