@@ -37,7 +37,7 @@
                 <div class="input-group w-100">
                     <input type="text" name="searcher" class="form-control " placeholder="Busca tu libro" aria-label="Recipient's username" aria-describedby="button-addon2">
                     <button type="submit" class="btn btn-outline-light" id="button-addon2">
-                        🡲
+                        <i class="fas fa-arrow-right"></i>
                     </button>
                 </div>
             </form>

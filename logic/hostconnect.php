@@ -5,9 +5,9 @@
     }
 
     $host = "localhost";
-    $user = "root";
-    $clave = "";
-    $bd = "solidary_books";
+    $user = "u463589001_user";
+    $clave = "Instituto-1990";
+    $bd = "u463589001_books";
 
     $con = mysqli_connect($host, $user, $clave, $bd);
 ?>
