@@ -4,9 +4,9 @@
     if (isset($_POST['id']))
     {
         $id = $_POST['id'];
-        $name = $_POST['name'];
-        $desc = $_POST['desc'];
-        $author = $_POST['author'];
+        $name = htmlspecialchars($_POST['name']);
+        $desc = htmlspecialchars($_POST['desc']);
+        $author = htmlspecialchars($_POST['author']);
         $price = $_POST['price'];
         $status = $_POST['status'];
         $photo = $_FILES['photo']['name'];

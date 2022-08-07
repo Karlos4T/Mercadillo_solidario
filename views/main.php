@@ -26,14 +26,22 @@
     <nav class="navbar navbar-expand-lg bg-dark d-flex flex-column">
         <div class="container-fluid w-100">
             <div class="w-25">
-                <a href="../views/" class="d-inline-flex rounded rounded-5 return p-3 text-light text-start text-sm-start" style="text-decoration: none;">
+                <a href="../views/" class="d-none rounded rounded-5 return p-3 text-light text-start text-sm-start" style="text-decoration: none;">
                     <i class="fas fa-arrow-left"></i>
                 </a> 
             </div>
-            <div class="d-flex flex-column w-auto align-items-center mt-4 m-sm-0">
+            <div class="d-flex flex-column w-auto align-items-center m-sm-0">
                 <img src="../public/imgs/Logo_sin_fondo.png" class="logo d-flex" alt="">
             </div>
-            <form action="../views/" method="GET" class="mx-md-3 w-sm-auto w-25 d-flex justify-content-end">
+            <form action="../views/" method="GET" class="mx-md-3 w-25 d-none d-sm-flex justify-content-end">
+                <div class="input-group w-100">
+                    <input type="text" name="searcher" class="form-control " placeholder="Busca tu libro" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button type="submit" class="btn btn-outline-light" id="button-addon2">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </form>
+            <form action="../views/" method="GET" class="mx-md-3 my-2 w-100 d-sm-none justify-content-end">
                 <div class="input-group w-100">
                     <input type="text" name="searcher" class="form-control " placeholder="Busca tu libro" aria-label="Recipient's username" aria-describedby="button-addon2">
                     <button type="submit" class="btn btn-outline-light" id="button-addon2">

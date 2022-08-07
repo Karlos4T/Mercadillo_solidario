@@ -24,9 +24,14 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-dark mb-5">
         <div class="container-fluid">
-            <a href="../views/">    
-                <img src="../public/imgs/Logo_sin_fondo.png" class="logo mm-3" alt="">
-            </a>    
+            <div class="w-25">
+                <a href="../views/" class="d-inline-flex rounded rounded-5 return p-3 text-light text-start text-sm-start" style="text-decoration: none;">
+                    <i class="fas fa-arrow-left"></i>
+                </a> 
+            </div>
+            <div class="d-flex flex-column w-auto align-items-center m-sm-0">
+                <img src="../public/imgs/Logo_sin_fondo.png" class="logo d-flex" alt="">
+            </div>   
             <?php
                 include '../logic/hostconnect.php';
                 include '../logic/rev_ips.php';
@@ -37,7 +42,7 @@
                     $id = $_GET['id'];
                 if ($_SESSION)
                 {?>
-                    <div class="dropstart">
+                    <div class="dropstart w-25 d-flex justify-content-end">
                         <button class="btn btn-outline-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Editar
                         </button>

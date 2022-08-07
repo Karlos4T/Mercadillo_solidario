@@ -20,7 +20,7 @@
         if (!$ip)
         {
             $id = $_POST['id'];
-            $name = $_POST['name'];
+            $name = htmlspecialchars($_POST['name']);
             $fechares = time();
             $ip = $_SERVER['REMOTE_ADDR'];
     

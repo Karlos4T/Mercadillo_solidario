@@ -7,9 +7,9 @@ if(isset($_SESSION))
 
     if(isset($_POST['name']) || isset($_POST['author']) || isset($_POST['desc']) || isset($_POST['price']) || isset($_POST['status']))
     {
-        $name = $_POST['name'];
-        $desc = $_POST['desc'];
-        $author = $_POST['author'];
+        $name = htmlspecialchars($_POST['name']);
+        $desc = htmlspecialchars($_POST['desc']);
+        $author = htmlspecialchars($_POST['author']);
         $price = $_POST['price'];
         $status = $_POST['status'];
         $photo = $_FILES['photo']['name'];

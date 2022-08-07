@@ -4,10 +4,12 @@
 
     if($_POST)
     {
-        if($_POST['user'] === 'carlos' && $_POST['password'] === '1234')
+        $user = htmlspecialchars($_POST['user']);
+        $password = htmlspecialchars($_POST['password']);
+        if($user === 'carlos' && $password === '1234')
         {            
-            $_SESSION['user'] = $_POST['user'];
-            $_SESSION['password'] = $_POST['password'];
+            $_SESSION['user'] = $user;
+            $_SESSION['password'] = $password;
             $_SESSION['time'] = time();
             if(!empty($_SESSION['user']) && !empty($_SESSION['password']))
             {

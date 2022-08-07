@@ -13,13 +13,11 @@ nav
     width: 130px;
     margin: 3px;
     filter: brightness(100000%);
-    cursor: pointer;
 }
 
 .logo:hover
 {
     filter: brightness(100%);
-    transition: .2s;
 }
 
 nav a:hover p
