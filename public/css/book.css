@@ -35,6 +35,10 @@ nav a:hover .logo
     height: auto;
 }
 
+.card-img
+{
+    filter: drop-shadow(10px 10px 5px rgb(66, 66, 66));
+}
 
 @media screen and (max-width: 430px) {
     /* For mobile phones: */

@@ -24,7 +24,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-dark mb-5">
         <div class="container-fluid">
-            <div class="w-25">
+            <div class="">
                 <a href="../views/" class="d-inline-flex rounded rounded-5 return p-3 text-light text-start text-sm-start" style="text-decoration: none;">
                     <i class="fas fa-arrow-left"></i>
                 </a> 
@@ -42,7 +42,7 @@
                     $id = $_GET['id'];
                 if ($_SESSION)
                 {?>
-                    <div class="dropstart w-25 d-flex justify-content-end">
+                    <div class="dropstart d-flex justify-content-end">
                         <button class="btn btn-outline-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Editar
                         </button>
@@ -90,7 +90,9 @@
                 else if (!$_SESSION && rev_ips())
                 {
                     ?>
-                        <a href="../views/login_admin.php" class="btn btn-outline-light">Login as admin</a>
+                        <div class="w-25 d-flex justify-content-end">
+                            <a href="../views/login_admin.php" class="btn btn-outline-light">Login as admin</a>
+                        </div>
                     <?php
                 }
                ?>
