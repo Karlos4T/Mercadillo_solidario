@@ -41,8 +41,8 @@
                 <form action="../logic/log_admin.php" method="POST" class="p-2 px-3">
                     <p class="h4 text-center text-light my-3">Admin Login</p>
                     <div>
-                        <input type="text" name="user" required class="form-control mt-3" placeholder="Usuario">
-                        <input type="password" name="password" required class="form-control mt-3" placeholder="Contraseña">
+                        <input type="text" maxlenght="25" name="user" required class="form-control mt-3" placeholder="Usuario">
+                        <input type="password" maxlength="25" name="password" required class="form-control mt-3" placeholder="Contraseña">
                     </div>
                     <div class="d-flex justify-content-end">
                         <input type="submit" class="btn btn-outline-success mt-4" value="Entrar">

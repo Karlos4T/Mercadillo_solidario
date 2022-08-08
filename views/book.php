@@ -70,19 +70,20 @@
                                     </form>
                                 </a>
                             </li>
+                            <li>
+                                <a class="dropdown-item p-0" href="#">
+                                    <form action="../logic/sold_book.php" method="POST">
+                                        <input type="hidden" name="id" value="<?php echo $id;?>">
+                                        <button type="submit" class="w-100 bg-transparent m-0 border-0 text-start text-success mx-2"><b>Libro vendido</b></button>
+                                    </form>
+                                </a>
+                            </li>
                             <li><hr class="dropdown-divider"></li>
                             <li>
                                 <a class="dropdown-item text-danger" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="#">
-                                    <b>Eliminar</b>
+                                    <b>Eliminar libro</b>
                                 </a>
-                            </li> 
-                            <li><hr class="dropdown-divider"></li>
-                            <li>
-                                <form action="../logic/out_admin.php" class="d-flex justify-content-center mt-3">
-                                    <input type="submit" class="btn btn-outline-danger" value="Cerrar Sesión">
-                                </form>
-                            </li>    
-                             
+                            </li>
                         </ul>
                     </div>
                 <?php
@@ -252,21 +253,21 @@
 
                                         <!-- Modal Unreserve book -->
                                       
-                                        <form action="../logic/unreserve_book.php" method="POST">
+                                        <form action="../logic/remove_book.php" method="POST">
                                             <input type="hidden" name="id" value="<?php echo $id?>">
                                             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h5 class="modal-title" id="staticBackdropLabel">Cancelar la reserva</h5>
+                                                        <h5 class="modal-title" id="staticBackdropLabel">Eliminar</h5>
                                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        ¿Seguro que quieres cancelar la reserva de <b> <?php echo $row['name']?> </b>? 
+                                                        ¿El libro <b> <?php echo $row['name']?> se eliminará de la base de datos permanentemente </b>? 
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary border-light" data-bs-dismiss="modal">Volver</button>
-                                                        <input type="submit" class="btn btn_btn btn-primary border-light" value="Aceptar">
+                                                        <input type="submit" class="btn btn-danger border-light" value="Eliminar">
                                                     </div>
                                                 </div>
                                             </div>

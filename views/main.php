@@ -13,7 +13,7 @@
     <script src="https://kit.fontawesome.com/19283c162a.js" crossorigin="anonymous"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../public/css/main1.css">
+    <link rel="stylesheet" href="../public/css/main.css">
 
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,12 +25,57 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-dark d-flex flex-column">
         <div class="container-fluid w-100">
-            <div class="w-25">
-                <a href="../views/" class="d-none rounded rounded-5 return p-3 text-light text-start text-sm-start" style="text-decoration: none;">
-                    <i class="fas fa-arrow-left"></i>
-                </a> 
+            <div class="w-25 d-flex justify-content-start">
+            <?php
+                include '../logic/hostconnect.php';
+
+                $ip = $_SERVER['REMOTE_ADDR'];
+                $query = "SELECT `ip` FROM `ips`";
+                $data = mysqli_query($con, $query);
+                $ip_in = false;
+
+                while($row = mysqli_fetch_array($data))
+                {
+                    if ($row['ip'] == $ip)
+                    {
+                        $ip_in = true;
+                        break;
+                    }
+                }
+                if ($ip_in == false)
+                {
+                    $query = "INSERT INTO `ips` (`ip`) VALUES ('$ip')";
+                    $res = mysqli_query($con, $query);
+                    if ($res)
+                    {
+                        $not_in = false;
+                        echo '<p class="text-light"><b>Bienvenid@</b></p>';
+                    }
+                }
+                
+                include '../logic/up_global_data.php';
+                include '../logic/log_admin.php'; 
+                include '../logic/rev_ips.php';
+
+                if (!$_SESSION && rev_ips())
+                {
+                    ?>
+                        <div class="d-flex justify-content-end mx-2">
+                            <a href="../views/login_admin.php" class="btn btn-outline-light">Login admin</a>
+                        </div>
+                    <?php
+                }
+                else if ($_SESSION && rev_ips())
+                {
+                    ?>
+                        <div class="d-flex justify-content-end mx-2">
+                            <a href="../views/admin_info.php" class="btn btn-outline-light">Panel Administrador</a>
+                        </div>
+                    <?php
+                }
+               ?> 
             </div>
-            <div class="d-flex flex-column w-auto align-items-center m-sm-0">
+            <div class="d-flex flex-column w-auto align-items-center py-2 m-sm-0">
                 <img src="../public/imgs/Logo_sin_fondo.png" class="logo d-flex" alt="">
             </div>
             <form action="../views/" method="GET" class="mx-md-3 w-25 d-none d-sm-flex justify-content-end">
@@ -42,7 +87,7 @@
                 </div>
             </form>
             <form action="../views/" method="GET" class="mx-md-3 my-2 w-100 d-sm-none justify-content-end">
-                <div class="input-group w-100">
+                <div class="input-group w-auto mx-2">
                     <input type="text" name="searcher" class="form-control " placeholder="Busca tu libro" aria-label="Recipient's username" aria-describedby="button-addon2">
                     <button type="submit" class="btn btn-outline-light" id="button-addon2">
                         <i class="fas fa-arrow-right"></i>
@@ -55,7 +100,6 @@
     <div class="container d-flex justify-content-center bg-transparent">
             <div class="container-social w-auto bg-dark d-flex justify-content-center">
                 <?php
-                    include '../logic/log_admin.php'; 
 
                     if (!$_SESSION)
                     {
@@ -112,7 +156,7 @@
     ?>
     <div class="container-fluid bg-light p-md-0">
     <div class="d-flex justify-content-center h-auto banner-container">
-        <img src="../public/imgs/banner-insti.png" class="w-100" alt="">
+        <img src="../public/imgs/banner-movil.png" class="w-100" alt="">
     </div>        
         <div class="container d-flex flex-wrap justify-content-evenly">
             <?php

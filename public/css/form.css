@@ -17,6 +17,15 @@ nav a:hover .logo
     transition: .2s;
 }
 
+.return:hover
+{
+    background-color: white;
+    color: black !important;
+    font-size: 20px;
+    padding: 5px;
+    transition: .2s;
+}
+
 .container-fluid
 {
     font-family: 'Poppins', sans-serif;

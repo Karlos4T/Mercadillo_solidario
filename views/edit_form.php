@@ -59,8 +59,8 @@
                 <div class="row d-flex justify-content-between mx-md-5">
 
                     <div class="col-12 col-md-6 p-0">
-                        <input class="col-12 p-2 mt-3" type="text" name="name" placeholder="Nombre" value="<?php echo $row['name']?>">
-                        <input class="col-12 p-2 my-3" type="text" name="author" placeholder="Autor" value="<?php echo $row['author']?>">
+                        <input class="col-12 p-2 mt-3" maxlength="50" type="text" name="name" placeholder="Nombre" value="<?php echo $row['name']?>">
+                        <input class="col-12 p-2 my-3" maxlength="30" type="text" name="author" placeholder="Autor" value="<?php echo $row['author']?>">
                     </div>
                     <div class="col-12 col-md-6 p-0">
                         <div class="form-group col-12 my-auto p-2 mt-2">
@@ -94,7 +94,7 @@
 
                 <div class="row d-flex justify-content-between mx-md-5">
 
-                    <textarea class="w-100 my-2 p-2" id="" cols="30" name="desc" placeholder="Descripción" rows="10"><?php echo $row['desc']?></textarea>
+                    <textarea class="w-100 my-2 p-2" maxlength="700" cols="30" name="desc" placeholder="Descripción" rows="10"><?php echo $row['desc']?></textarea>
 
                 </div>
 

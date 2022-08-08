@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="../public/css/form-s.css">
+    <link rel="stylesheet" href="../public/css/form.css">
 
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,31 +22,32 @@
 
 </head>
 <body>
-    <?php
-        include '../logic/rev_ips.php';
-    ?>
-    <nav class="navbar navbar-expand-lg bg-dark mb-5">
-        <div class="container-fluid">
-            <a href="../views/">    
-                <img src="../public/imgs/Logo_sin_fondo.png" class="logo mx-3" style="width: 130px;" alt="">
-            </a>    
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <nav class="navbar navbar-expand-lg bg-dark d-flex flex-column">
+        <div class="container-fluid w-100">
+            <div class="w-25">
+                <a href="../views/" class="d-inline-flex rounded rounded-5 return p-3 text-light text-start text-sm-start" style="text-decoration: none;">
+                    <i class="fas fa-arrow-left"></i>
+                </a> 
+            </div>
+            <div class="d-flex flex-column w-auto align-items-center py-2 m-sm-0">
+                <img src="../public/imgs/Logo_sin_fondo.png" class="logo d-flex" alt="">
+            </div>
+                <div class="w-25"></div>
+            </div>
         </div>
     </nav>
 
     <form action="../logic/up_book.php" method="POST" enctype="multipart/form-data">
 
-        <p class="h4 text-center">Sube tu libro!</p>
+        <p class="h4 text-center mt-">Sube tu libro!</p>
 
         <div class="container px-5">
 
                 <div class="row d-flex justify-content-between mx-md-5">
 
                     <div class="col-12 col-md-6 p-0">
-                        <input class="col-12 p-2 mt-3" type="text" name="name" placeholder="Nombre">
-                        <input class="col-12 p-2 my-3" type="text" name="author" placeholder="Autor">
+                        <input class="col-12 p-2 mt-3" maxlength="50" type="text" name="name" placeholder="Nombre">
+                        <input class="col-12 p-2 my-3" maxlength="30" type="text" name="author" placeholder="Autor">
                     </div>
                     <div class="col-12 col-md-6 p-0">
                         <div class="form-group col-12 my-auto p-2 mt-2">
@@ -80,7 +81,7 @@
 
                 <div class="row d-flex justify-content-between mx-md-5">
 
-                    <textarea class="w-100 my-2 p-2" id="" cols="30" name="desc" placeholder="Descripción" rows="10"></textarea>
+                    <textarea class="w-100 my-2 p-2" maxlength="700" cols="30" name="desc" placeholder="Descripción" rows="10"></textarea>
 
                 </div>
 
@@ -114,8 +115,8 @@
 
                 <div class="row d-flex justify-content-md-end justify-content-between mx-md-5 mb-5 mt-4">
 
-                    <a class="btn btn-secondary col-4 col-md-2 col-lg-1 mx-md-3" href="../views/" name="cancel" placeholder="Cancelar" id="">Cancel</a>
-                    <input class="btn btn-success col-4 col-md-2 col-lg-1" type="submit" name="submit" placeholder="Aceptar" id="">
+                    <a class="btn btn-secondary col-4 col-md-2 col-lg-1 mx-md-3" href="../views/" name="cancel" placeholder="Cancelar">Cancel</a>
+                    <input class="btn btn-success col-4 col-md-2 col-lg-1" type="submit" name="submit" placeholder="Aceptar">
 
                 </div>
 
