@@ -50,6 +50,15 @@ nav a:hover .logo
     }   
 }
 
+.return:hover
+{
+    background-color: white;
+    color: black !important;
+    font-size: 20px;
+    padding: 5px;
+    transition: .2s;
+}
+
 .row .btn_btn
 {
     background-color: #16a094fe;

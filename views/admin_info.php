@@ -54,7 +54,7 @@
                     {
                         ?>
                             <div class="row w-100 d-flex justify-content-center py-4">
-                                <div class="w-auto text-light mx-5" style="background-color: #16a094fe; border-radius: 20px;">
+                                <div class="col-sm-12 col-lg-2 col-md-6 text-light mx-5 my-2" style="background-color: #16a094fe; border-radius: 20px;">
                                     <div class="icon-container w-100 justify-content-center d-flex">
                                         <i class="fas fa-book p-4" style="font-size: 2.5rem;"></i>
                                     </div>
@@ -64,7 +64,7 @@
                                         </b>
                                     </div>
                                 </div>
-                                <div class="w-auto text-light mx-5" style="background-color: #16a094fe; border-radius: 20px;">
+                                <div class="col-sm-12 col-lg-2 col-md-6 text-light mx-5 my-2" style="background-color: #16a094fe; border-radius: 20px;">
                                     <div class="icon-container w-100 justify-content-center d-flex">
                                         <i class="fas fa-coins p-4" style="font-size: 2.5rem;"></i>
                                     </div>
@@ -74,7 +74,7 @@
                                         </b>
                                     </div>
                                 </div>
-                                <div class="w-auto text-light mx-5" style="background-color: #16a094fe; border-radius: 20px;">
+                                <div class="col-sm-12 col-lg-2 col-md-6 text-light mx-5 my-2" style="background-color: #16a094fe; border-radius: 20px;">
                                     <div class="icon-container w-100 justify-content-center d-flex">
                                         <i class="fas fa-user p-4" style="font-size: 2.5rem;"></i>
                                     </div>
@@ -102,9 +102,10 @@
                                     <th scope="row">Nombre</th>
                                     <td>Libro</td>
                                     <td>Days left</td>
+                                    <td></td>
                                 </tr>
                                 <?php
-                                    $query = "SELECT `name`, `res_name`, `res_date` FROM `books` WHERE `reserved` = 'reservado'";
+                                    $query = "SELECT `id`, `name`, `res_name`, `res_date` FROM `books` WHERE `reserved` = 'reservado'";
                                     $res = mysqli_query($con, $query);
                                 
                                     if ($res)
@@ -151,6 +152,12 @@
                                                 <th scope="row"><?php echo $row['res_name'];?></th>
                                                 <td><?php echo $row['name'];?></td>
                                                 <td><?php echo $time, " ", $u;?></td>
+                                                <td>
+                                                    <form action="../logic/unreserve_book.php" method="POST" class="d-flex justify-content-end">
+                                                        <input type="hidden" name="id" value="<?php echo $row['id'];?>">
+                                                        <input type="submit" class="col-lg-3 col-md-5 col-9 p-1 mx-2 btn btn-danger border-0" style="font-size: .8rem;" value="x">
+                                                    </form>
+                                                </td>
                                             </tr>
                                             <?php
                                         }

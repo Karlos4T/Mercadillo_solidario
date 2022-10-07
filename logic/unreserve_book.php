@@ -15,7 +15,7 @@
         if($res)
         {
             if ($id)
-                header("Location: ../views/book.php?id=$id");
+                header("Location: $_SERVER[HTTP_REFERER]");
         }
     }
 ?>
