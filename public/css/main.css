@@ -1,3 +1,4 @@
+/*START MENÚ*/
 nav
 {
     font-family: 'Poppins', sans-serif;
@@ -31,7 +32,8 @@ nav a:hover img
     filter: brightness(70%) !important;
     transition: .2s !important;
 }
-
+/*END MENÚ*/
+/*START SOCIAL*/
 .banner
 {
     /* From https://css.glass */
@@ -71,7 +73,6 @@ nav a:hover img
     font-size: 25px;
     margin: 0;
     transition: .2s !important;
-
 }
 
 .twitter:hover i
@@ -80,7 +81,6 @@ nav a:hover img
     font-size: 25px;
     margin: 0;
     transition: .2s !important;
-
 }
 
 .facebook:hover i
@@ -100,7 +100,17 @@ nav a:hover img
     margin: 0;
     transition: .2s !important;
 }
+/*END SOCIAL*/
 
+/*START CATEGORIE*/
+.categorie:hover
+{
+    color: #16a094fe !important;
+    cursor: pointer !important;
+}
+/*END CATEGORIE*/
+
+/*START DISPLAY BOOKS*/
 .card .card-body .btn
 {
     background-color: #16a094fe;
@@ -119,5 +129,7 @@ nav a:hover img
 
 .card-img-top
 {
+    min-height: 300px;
     object-fit: cover;
 }
+/*END DISPLAY BOOKS*/

@@ -70,6 +70,8 @@
                                 <option>Novela</option>
                                 <option>Didáctico</option>
                                 <option>Guía</option>
+                                <option>Científico</option>
+                                <option>Biografía</option>
 
                             </select>
 

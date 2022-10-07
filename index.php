@@ -1,3 +1,3 @@
 <?php
-    header('Location: /solidary_books/views/');
+    header('Location: /Mercadillo_solidario/views/');
 ?>
