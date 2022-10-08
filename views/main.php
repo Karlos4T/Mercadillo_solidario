@@ -152,17 +152,19 @@
 	<!--START BOOK DISPLAY-->
     <?php
         include '../logic/hostconnect.php';
-       //Logout admin automáticoa
+        include '../logic/out_admin.php';
+       //Logout admin automático
         if ($_SESSION)
         {
             if ((time() - $_SESSION['time']) > (3600 * 12))
-                header("Location: ../logic/out_admin.php");
+                logout_admin();
         }
     ?>
     <div class="container-fluid bg-light p-md-0 w-100">
-		<div class="categories d-flex justify-content-center w-100 pt-5 text-secondary border-bottom border-gray">
-				<ul class="d-flex mt-4">
-					<li class="mx-md-4 mx-2 categorie" style="list-style: none;">
+        <!--START CATEGORIES-->
+		<div class="container-categories d-flex justify-content-center w-100 pt-5 text-secondary border-bottom border-gray">
+				<ul class="d-flex mt-4 col-12 col-lg-6 justify-content-evenly">
+					<li class="categorie mx-2" style="list-style: none;">
 						<form action="../views/" method="GET" class="text-gray">
 								<input type="hidden" name="searcher" value="Novela">
 								<button type="submit" class="border-0 bg-light text-secondary categorie">
@@ -170,7 +172,7 @@
 								</button>
 						</form>
 					</li>
-					<li class="mx-md-4 mx-2 categorie" style="list-style: none;">
+					<li class="categorie mx-2" style="list-style: none;">
 						<form action="../views/" method="GET" class="text-gray">
 								<input type="hidden" name="searcher" value="Guía">
 								<button type="submit" class="border-0 bg-light text-secondary categorie">
@@ -178,7 +180,7 @@
 								</button>
 						</form>
 					</li>
-					<li class="mx-md-4 mx-2 categorie" style="list-style: none;">
+					<li class="categorie mx-2" style="list-style: none;">
 						<form action="../views/" method="GET" class="text-gray">
 								<input type="hidden" name="searcher" value="Didáctico">
 								<button type="submit" class="border-0 bg-light text-secondary categorie">
@@ -186,7 +188,7 @@
 								</button>
 						</form>
 					</li>
-					<li class="mx-md-4 mx-2 categorie" style="list-style: none;">
+					<li class="categorie mx-2" style="list-style: none;">
 						<form action="../views/" method="GET" class="text-gray">
 								<input type="hidden" name="searcher" value="Científico">
 								<button type="submit" class="border-0 bg-light text-secondary categorie">
@@ -194,7 +196,7 @@
 								</button>
 						</form>
 					</li>
-					<li class="mx-md-4 mx-2 categorie" style="list-style: none;">
+					<li class="categorie mx-2" style="list-style: none;">
 						<form action="../views/" method="GET" class="text-gray">
 								<input type="hidden" name="searcher" value="Novela">
 								<button type="submit" class="border-0 bg-light text-secondary categorie">
@@ -205,11 +207,6 @@
 					
 				</ul>
 		</div>
-    <!--
-		<div class="d-flex justify-content-center h-auto banner-container">
-			<img src="../public/imgs/banner-movil.png" class="w-100" alt="">
-		</div>
-	-->  
         <div class="container d-flex flex-wrap justify-content-evenly">
             <?php
                 if (isset($_GET['searcher']) && !empty($_GET['searcher']))
@@ -231,7 +228,7 @@
                                 class="card-img-top p-3 rounded-5 h-100" alt="...">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between">
-                                        <h6 class="card-title text-nowrap text-secondary w-75">
+                                        <h6 class="card-title text-nowrap text-dark w-75">
 											<b>
 												<?php
 													echo $row['name'];
@@ -249,10 +246,12 @@
                                     </div>
                                     <div class="d-flex justify-content-between w-100">
                                         <div>
-                                            <p class="text-secondary">
-                                                <?php
-                                                    echo $row['author'];
-                                                ?>
+                                            <p class="text-secondary" style="font-size: .8rem;">
+                                                <b>
+                                                    <?php
+                                                        echo $row['author'];
+                                                    ?>
+                                                </b>
                                             </p>
                                         </div>
                                         

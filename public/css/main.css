@@ -103,11 +103,19 @@ nav a:hover img
 /*END SOCIAL*/
 
 /*START CATEGORIE*/
+.container-categories
+{
+    overflow-y: hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
 .categorie:hover
 {
     color: #16a094fe !important;
     cursor: pointer !important;
 }
+
 /*END CATEGORIE*/
 
 /*START DISPLAY BOOKS*/

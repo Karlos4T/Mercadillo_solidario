@@ -58,7 +58,7 @@
                                     <div class="icon-container w-100 justify-content-center d-flex">
                                         <i class="fas fa-book p-4" style="font-size: 2.5rem;"></i>
                                     </div>
-                                    <div class="d-flex w-100 justify-content-center p-4">
+                                    <div class="d-flex w-100 justify-content-center text-center p-4">
                                         <b>
                                             <?php echo $row['num_books'], " libros en stock"?>
                                         </b>
@@ -68,7 +68,7 @@
                                     <div class="icon-container w-100 justify-content-center d-flex">
                                         <i class="fas fa-coins p-4" style="font-size: 2.5rem;"></i>
                                     </div>
-                                    <div class="d-flex w-100 justify-content-center p-4">
+                                    <div class="d-flex w-100 justify-content-center text-center p-4">
                                         <b>
                                             <?php echo $row['dinero_recaudado'], "€ recaudados"?>
                                         </b>
@@ -78,7 +78,7 @@
                                     <div class="icon-container w-100 justify-content-center d-flex">
                                         <i class="fas fa-user p-4" style="font-size: 2.5rem;"></i>
                                     </div>
-                                    <div class="d-flex w-100 justify-content-center p-4">
+                                    <div class="d-flex w-100 justify-content-center text-center p-4">
                                         <b>
                                             <?php echo $row['visitas'], " personas han visto la web"?>
                                         </b>
