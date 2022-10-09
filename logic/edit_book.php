@@ -13,7 +13,9 @@
         $photo_mokup = $_FILES['photo_mokup']['name'];
         $category = $_POST['category'];
     
-        $query = "UPDATE `books` SET `name`='$name',`desc`='$desc', `author`='$author',`price`='$price',`status`='$status' WHERE id = $id";
+        echo $id, " " ,$name, " " ,$desc, " " ,$author, " " ,$price, " " ,$status, " " ,$category;
+
+        $query = "UPDATE `books` SET `name`='$name',`desc`='$desc', `author`='$author',`price`='$price',`status`='$status', `category`='$category' WHERE id = $id";
         $res = mysqli_query($con, $query);
 
         if ($res)
@@ -26,9 +28,8 @@
                 $binariosImagen = fread($imagenSubida, $tamanoArchivo);
                 $photo = mysqli_escape_string($con, $binariosImagen);
 
-                $query1 = "UPDATE `photo` SET `photo`='$binariosImagen' WHERE id = $id";
-                $res = mysqli_query($con, $query1);
-                
+                $query = "UPDATE `books` SET `photo`='$photo', `photo_type`='$tipoArchivo' WHERE id = $id";
+                $res = mysqli_query($con, $query);
             }
             if (!empty($photo_mokup))
             {
@@ -38,7 +39,7 @@
                 $binariosImagen = fread($imagenSubida, $tamanoArchivo);
                 $photo_mokup = mysqli_escape_string($con, $binariosImagen);
 
-                $query = "UPDATE `books` SET `photo_mokup` = '$binariosImagen' WHERE id = $id";
+                $query = "UPDATE `books` SET `photo_mokup` = '$photo_mokup' WHERE id = $id";
                 $res = mysqli_query($con, $query);
                 
             }

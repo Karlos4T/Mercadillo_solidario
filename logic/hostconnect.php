@@ -4,7 +4,7 @@
         session_start();
     }
 
-    if (false)
+    if (true)
     {
         $host = "localhost";
         $user = "root";

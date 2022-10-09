@@ -1,5 +1,4 @@
 <?php
-
     include 'hostconnect.php';
 
     if($_POST)

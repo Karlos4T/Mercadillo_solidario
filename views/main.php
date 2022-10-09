@@ -152,12 +152,11 @@
 	<!--START BOOK DISPLAY-->
     <?php
         include '../logic/hostconnect.php';
-        include '../logic/out_admin.php';
        //Logout admin automático
         if ($_SESSION)
         {
             if ((time() - $_SESSION['time']) > (3600 * 12))
-                logout_admin();
+                header("Location: $SERVER[HTTP_REFERER]");
         }
     ?>
     <div class="container-fluid bg-light p-md-0 w-100">
@@ -282,6 +281,7 @@
 	<!--END BOOK DISPLAY-->
 
     <script src="../public/js/animations.js"></script>
+    
     <!-- JavaScript Bundle with Popper -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
