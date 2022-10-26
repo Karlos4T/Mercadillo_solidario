@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I.E.S P.Negras Libros solidarios</title>
 
+    <!--Icono-->
+    <link rel="shortcut icon" href="../public/imgs/Logo_sin_fondo.png" />
+
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     
@@ -23,14 +26,13 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-dark mb-5">
-        <div class="container-fluid">
-            <a href="../views/">
-                <img src="../public/imgs/Logo_sin_fondo.png" class="logo mx-3" style="width: 130px;" alt="">
-            </a>    
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <nav class="navbar navbar-expand-lg bg-dark d-flex flex-column">
+        <div class="container-fluid w-100">
+            <div class="w-25">
+                <a href="../views/" class="d-inline-flex rounded rounded-5 return p-3 text-light text-start text-sm-start" style="text-decoration: none;">
+                    <i class="fas fa-arrow-left"></i>
+                </a> 
+            </div>
         </div>
     </nav>
     <?php

@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mercadillo solidario IES P.Negras</title>
 
+    <!--Icono-->
+    <link rel="shortcut icon" href="../public/imgs/Logo_sin_fondo.png" />
+
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     
@@ -24,13 +27,13 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-dark mb-5">
         <div class="container-fluid">
-            <div class="">
+            <div class="w-25">
                 <a href="../views/" class="d-inline-flex rounded rounded-5 return p-3 text-light text-start text-sm-start" style="text-decoration: none;">
                     <i class="fas fa-arrow-left"></i>
                 </a> 
             </div>
             <div class="d-flex flex-column w-auto align-items-center m-sm-0">
-                <img src="../public/imgs/Logo_sin_fondo.png" class="logo d-flex" alt="">
+                <img src="../public/imgs/Logo_sin_fondo.png" class="logo d-flex p-2" alt="">
             </div>   
             <?php
                 include '../logic/hostconnect.php';
@@ -42,7 +45,7 @@
                     $id = $_GET['id'];
                 if ($_SESSION)
                 {?>
-                    <div class="dropstart d-flex justify-content-end">
+                    <div class="dropstart d-flex justify-content-end w-25">
                         <button class="btn btn-outline-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Editar
                         </button>

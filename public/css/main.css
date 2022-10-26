@@ -103,11 +103,12 @@ nav a:hover img
 /*END SOCIAL*/
 
 /*START CATEGORIE*/
-.container-categories
+.container-categories ul
 {
     overflow-y: hidden;
     overflow-x: scroll;
     white-space: nowrap;
+    margin-left: 20px;
 }
 
 .categorie:hover

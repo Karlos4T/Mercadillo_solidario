@@ -10,15 +10,14 @@ nav
 
 .logo
 {
-    width: 130px;
+    width: 110px;
     margin: 3px;
+    filter: brightness(100000%);
 }
 
-nav a:hover .logo
+.logo:hover
 {
-    width: 140px;
-    margin: 0px;
-    transition: .2s;
+    filter: brightness(100%);
 }
 
 .row .card-img{

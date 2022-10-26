@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I.E.S P.Negras Libros solidarios</title>
 
+    <!--Icono-->
+    <link rel="shortcut icon" href="../public/imgs/Logo_sin_fondo.png" />
+
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     
@@ -34,7 +37,7 @@
                 $query = "SELECT `ip` FROM `ips`";
                 $data = mysqli_query($con, $query);
                 $ip_in = false;
-
+                
                 while($row = mysqli_fetch_array($data))
                 {
                     if ($row['ip'] == $ip)
@@ -57,7 +60,7 @@
                 include '../logic/up_global_data.php';
                 include '../logic/log_admin.php'; 
                 include '../logic/rev_ips.php';
-
+                
                 if (!$_SESSION && rev_ips())
                 {
                     ?>
@@ -78,12 +81,12 @@
             </div>
 			<a href="../views">
 				<div class="d-flex flex-column w-auto align-items-center py-2 m-sm-0">
-					<img src="../public/imgs/Logo_sin_fondo.png" class="logo d-flex" alt="">
+					<img src="../public/imgs/Logo_sin_fondo.png" class="logo d-flex p-1" alt="">
 				</div>
 			</a>
             <form action="../views/" method="GET" class="mx-md-3 w-25 d-none d-sm-flex justify-content-end">
                 <div class="input-group w-100">
-                    <input type="text" name="searcher" class="form-control " placeholder="Busca tu libro" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <input type="text" name="searcher" class="form-control " placeholder="libro, autor, categoría, estado, precio..." aria-label="Recipient's username" aria-describedby="button-addon2">
                     <button type="submit" class="btn btn-outline-light" id="button-addon2">
                         <i class="fas fa-search"></i>
                     </button>
@@ -163,7 +166,8 @@
         <!--START CATEGORIES-->
 		<div class="container-categories d-flex justify-content-center w-100 pt-5 text-secondary border-bottom border-gray">
 				<ul class="d-flex mt-4 col-12 col-lg-6 justify-content-evenly">
-					<li class="categorie mx-2" style="list-style: none;">
+				<li class="d-md-none text-light">   ignore   </li>	
+                <li class="categorie mx-2" style="list-style: none;">
 						<form action="../views/" method="GET" class="text-gray">
 								<input type="hidden" name="searcher" value="Novela">
 								<button type="submit" class="border-0 bg-light text-secondary categorie">
@@ -203,7 +207,6 @@
 								</button>
 						</form>
 					</li>
-					
 				</ul>
 		</div>
         <div class="container d-flex flex-wrap justify-content-evenly">

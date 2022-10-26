@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I.E.S P.Negras Libros solidarios</title>
 
+    <!--Icono-->
+    <link rel="shortcut icon" href="../public/imgs/Logo_sin_fondo.png" />
+
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     
@@ -28,11 +31,6 @@
                 <a href="../views/" class="d-inline-flex rounded rounded-5 return p-3 text-light text-start text-sm-start" style="text-decoration: none;">
                     <i class="fas fa-arrow-left"></i>
                 </a> 
-            </div>
-            <div class="d-flex flex-column w-auto align-items-center py-2 m-sm-0">
-                <img src="../public/imgs/Logo_sin_fondo.png" class="logo d-flex" alt="">
-            </div>
-                <div class="w-25"></div>
             </div>
         </div>
     </nav>
